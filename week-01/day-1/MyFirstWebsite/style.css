@@ -1,0 +1,37 @@
+body{
+    font-family: consolas
+}
+.container{
+    width: 80%;
+    margin: 0 auto
+}
+header{
+    background: #333333;
+}
+nav {
+    float: right;
+}
+nav ul{
+    list-style: none;   
+}
+nav li{
+    display: inline-block;
+}
+#titles-and-definitions{
+    text-align: center
+}
+#my-info{
+    margin: 0 10%
+}
+#tad2{
+    margin: 0 10%
+}
+.dashes{
+    text-align: center
+}
+a{
+    color: #ff0099
+}
+h1{
+    font-family: arial
+}

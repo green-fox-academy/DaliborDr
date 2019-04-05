@@ -1,12 +1,19 @@
+import java.util.Scanner;
+
 public class DrawTriangle {
-    public static void main(String[] args){
-       String Star = "*";
-       for (int lines = 0 ; lines< 4 ; lines++ ){
-           System.out.println(Star);
-           if (Star){
-               System.out.println(Star +Star);
-           }
-       }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int userInput = scanner.nextInt();
+        String Star = "*";
+        for (int stars = 0; stars < userInput; stars++ ){
+            if (int addedStars = )
+        }
+
+
+
+
+
+
 
 
 
@@ -19,8 +26,6 @@ public class DrawTriangle {
 // ****
 //
 // The triangle should have as many lines as the number was
-
-
 
 
     }

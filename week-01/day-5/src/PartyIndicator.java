@@ -1,26 +1,22 @@
 import java.util.Scanner;
+
 public class PartyIndicator {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Number of girls that comes to a party");
         int userInput1 = scanner.nextInt();
         System.out.println("Number of boys that comes to a party");
         int userInput2 = scanner.nextInt();
 
-        if ((userInput1 == userInput2) & (userInput1+userInput2 >=20)){
+        if ((userInput1 == userInput2) & (userInput1 + userInput2 >= 20)) {
             System.out.println("The party is excellent!");
-        }
-        else if ((userInput1+userInput2 >=20) & (userInput1 != userInput2) & (userInput1 != 0) ){
-        System.out.println("Quite cool party!");
-        }
-        else if (userInput1+userInput2 <20){
+        } else if ((userInput1 + userInput2 >= 20) & (userInput1 != userInput2) & (userInput1 != 0)) {
+            System.out.println("Quite cool party!");/**/
+        } else if (userInput1 + userInput2 < 20) {
             System.out.println("Average party...");
-        }
-        else if (userInput1 == 0){
+        } else if (userInput1 == 0) {
             System.out.println("Sausage party");
         }
-
-
 
 
         // Write a program that asks for two numbers
@@ -37,9 +33,6 @@ public class PartyIndicator {
 //
 // It should print: Sausage party
 // If no girls are coming, regardless the count of the people
-
-
-
 
 
     }

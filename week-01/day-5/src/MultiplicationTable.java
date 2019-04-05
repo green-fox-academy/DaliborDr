@@ -1,16 +1,16 @@
 import java.util.Scanner;
+
 public class MultiplicationTable {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Write a number");
         int userInput = scanner.nextInt();
         int c;
-        for (c = 1;c <= 10 ; c++){
+        for (c = 1; c <= 10; c++) {
             int d = c * userInput;
             System.out.println(c + "*" + userInput + "=" + d);
 
         }
-
 
 
 
@@ -29,8 +29,6 @@ public class MultiplicationTable {
 // 8 * 15 = 120
 // 9 * 15 = 135
 // 10 * 15 = 150
-
-
 
 
     }

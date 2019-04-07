@@ -3,11 +3,26 @@ import java.util.Scanner;
 public class DrawTriangle {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int userInput = scanner.nextInt();
-        String Star = "*";
-        for (int stars = 0; stars < userInput; stars++ ){
-            if (int addedStars = )
+        int size = scanner.nextInt();
+
+        String star = "*";
+        int i,j;
+
+        for (i= 0; i < size; i++){
+
+            for (j = 0; j < size ; j++) {
+                if (j<=i) {
+                    System.out.print(star);
+                }
+
+            }
+            System.out.println();
         }
+
+
+
+
+
 
 
 

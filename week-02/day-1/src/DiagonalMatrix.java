@@ -1,4 +1,5 @@
 import java.util.Arrays;
+
 public class DiagonalMatrix {
     // - Create (dynamically) a two dimensional array
     //   with the following matrix. Use a loop!
@@ -9,21 +10,24 @@ public class DiagonalMatrix {
     //   0 0 0 1
     //
     // - Print this two dimensional array to the output
-    public static void main(String[]args){
+    public static void main(String[] args) {
 
 
         int[][] myArray = new int[4][4];
+        for (int row = 0; row < 4; row++) {
+            for (int column = 0; column < 4; column++) {
+                if (row == column) {
+                    myArray[row][column] = 1;
+                    System.out.print(myArray[row][column]);
+                }
+                else {
+                    System.out.print(myArray[row][column]);
+                }
 
-        for (int row = 0; row <4 ; row++) {
-            for (int column = 0; column <4 ; column++) {
-                System.out.print(myArray[row][column]);
-
-            }System.out.println();
+            }
+            System.out.println();
 
         }
-
-
-
 
 
     }

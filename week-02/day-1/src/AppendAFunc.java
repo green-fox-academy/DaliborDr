@@ -13,8 +13,7 @@ public class AppendAFunc {
 
     }
     public static String appendAFunc(String typo){
-        String x = typo + "a";
-        return x;
+        return typo + "a";
 
     }
 }

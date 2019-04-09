@@ -20,9 +20,12 @@ public class MapIntroduction1 {
             System.out.println(values);
         }
         map.put(68,'D');
-        for (int keys : map.keySet()){
-            if (map()==map);
-        }
+        System.out.println(map.size());
+        System.out.println(map.get(99));
+        map.remove(97);
+        System.out.println(map.get(100));
+        map.clear();
+
 
 
 

@@ -30,7 +30,7 @@ public class PersonalFinance {
                 max=fin.get(i);
             }
             else{
-                System.out.println(max);Enough for today
+                System.out.println(max);
             }
 
         }

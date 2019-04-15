@@ -1,6 +1,6 @@
 public class BunniesAgain {
     public static void main(String[] args) {
-    System.out.println(bunnies(5));
+    System.out.println(bunnies(4));
     }
     public static int bunnies(int a){
         if (a>0 && a%2==0){

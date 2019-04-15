@@ -3,7 +3,7 @@ import java.util.List;
 
 public class GreatestCommonDivisor {
     public static void main(String[] args) {
-    System.out.println(divide(10,50));
+    System.out.println(divide(30,55));
     }
     public static int divide(int a,int b){
         if (a == b) {

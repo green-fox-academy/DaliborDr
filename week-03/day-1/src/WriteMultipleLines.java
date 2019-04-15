@@ -1,3 +1,10 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+
 // Create a function that takes 3 parameters: a path, a word and a number
 // and is able to write into a file.
 // The path parameter should be a string that describes the location of the file you wish to modify
@@ -8,10 +15,26 @@
 // The function should not raise any errors if it could not write the file.
 public class WriteMultipleLines {
     public static void main(String[] args) {
+        putin("apple","new-file.txt",5);
 
     }
     public static void putin(String word,String path,int number){
-        
+        Path filepath = Paths.get(path);
+        List<String> content = new ArrayList();
+        try {
+        for (int i = 0; i <number ; i++) {
+            content.add(word);
+            Files.write(filepath, content);
+
+
+
+        }
+
+        }
+        catch (IOException e){
+
+        }
+
 
 
     }

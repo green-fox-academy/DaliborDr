@@ -23,7 +23,7 @@ public class CountLines {
             for (String words : lines) {
                 a++;
                 System.out.println(words);
-                return a;
+
             }
 
 

@@ -11,7 +11,7 @@ public class Teacher {
 
     public static void main(String[] args) {
         Student Dalibor = new Student();
-        Dalibor.learn("It is koala.");
+        Dalibor.learn("Is it koala ?");
 
     }
 }

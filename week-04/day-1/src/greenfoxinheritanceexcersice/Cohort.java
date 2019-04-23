@@ -7,6 +7,12 @@ public class Cohort {
     public List<Student> students;
     public  List<Mentor> mentors;
 
+    public Cohort(String name, List<Student> students, List<Mentor> mentors) {
+        this.name = name;
+        this.students = students;
+        this.mentors = mentors;
+    }
+
     public void addStudent(Student student) {
         students.add(student);
     }

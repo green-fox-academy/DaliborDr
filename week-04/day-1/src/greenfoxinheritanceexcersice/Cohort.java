@@ -1,16 +1,17 @@
 package greenfoxinheritanceexcersice;
 
-import java.util.List;
+import java.util.*;
+
 
 public class Cohort {
     public String name;
     public List<Student> students;
     public  List<Mentor> mentors;
 
-    public Cohort(String name, List<Student> students, List<Mentor> mentors) {
+    public Cohort(String name) {
         this.name = name;
-        this.students = students;
-        this.mentors = mentors;
+        this.students = new ArrayList<>();
+        this.mentors = new ArrayList<>();
     }
 
     public void addStudent(Student student) {

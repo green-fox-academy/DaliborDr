@@ -12,6 +12,9 @@ public class Student extends Person {
 
     public Student() {
         this.name = "Jane Doe";
+        this.age = 30;
+        this.gender = "female";
+        this.previousOrganization = "The School of Life";
 
     }
 

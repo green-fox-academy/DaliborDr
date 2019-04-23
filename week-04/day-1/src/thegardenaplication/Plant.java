@@ -2,7 +2,11 @@ package thegardenaplication;
 
 public class Plant {
     public String name;
-    public int waterAmount;
+    protected double waterAmount;
+    public double waterNeed;
+    boolean needsWater;
+
+
 
     public  Plant( String name) {
         this.name = name;
@@ -13,5 +17,13 @@ public class Plant {
         this.waterAmount += water;
     }
 
-
+    public boolean isNeedsWater() {
+        if (waterAmount < waterNeed) {
+            needsWater = true;
+        }
+        else {
+            needsWater = false;
+        }
+        return needsWater;
+    }
 }

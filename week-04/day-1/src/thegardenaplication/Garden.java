@@ -12,12 +12,30 @@ public class Garden {
 
     public void watering(int water) {
         System.out.println("Watering with " + water);
-        water = water/ plants.size();
-        for (int i = 0; i < plants.size() ; i++) {
-            plants.get(i).waterAmount = plants.get(i).waterAmount + water;
+        water= water/ needWater();
+        for (int i = 0; i < plants.size(); i++) {
+            if (plants.get(i).isNeedsWater()) {
+                plants.get(i).watering(water);
+                System.out.println("The " + plants.get(i).name + " needs water");
+            }
+            else {
+                System.out.println("The " + plants.get(i).name + " doesn't need water");
+            }
         }
 
+
     }
+
+    public int needWater() {
+        int amountFlowers = 0;
+        for (int i = 0; i < plants.size() ; i++) {
+            if (plants.get(i).isNeedsWater()) {
+                amountFlowers++;
+            }
+        }
+        return amountFlowers;
+    }
+
 
 
 }

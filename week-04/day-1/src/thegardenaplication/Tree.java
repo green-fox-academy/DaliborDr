@@ -1,18 +1,19 @@
 package thegardenaplication;
 
-public class Tree {
-    public int waterAmount = 0;
-    public String name;
+public class Tree extends Plant {
 
     public Tree(String name) {
-        this.name = name;
+        super(name);
     }
 
     public void needWater() {
-        if (waterAmount < 10)
-        System.out.println("The " + name + " Tree needs water");
+        if (waterAmount < 10) {
+            System.out.println("The " + name + " Tree needs water");
+        } else {
+            System.out.println("The " + name + " Tree doesn't need water");
+        }
     }
-
+    @Override
     public void watering(int water) {
         waterAmount += water * 0.4;
     }

@@ -1,11 +1,9 @@
 package thegardenaplication;
 
-public class Flower {
-    public String name;
-    public int waterAmount = 0;
+public class Flower extends Plant {
 
     public Flower(String name) {
-        this.name = name;
+        super(name);
     }
 
     public void needsWater() {
@@ -16,7 +14,8 @@ public class Flower {
             System.out.println("The " + name + " doesn't need water");
         }
     }
-
+    
+    @Override
     public void watering(int water) {
         waterAmount += water*0.75;
 

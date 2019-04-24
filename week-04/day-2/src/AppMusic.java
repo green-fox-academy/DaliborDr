@@ -23,5 +23,4 @@ public class AppMusic {
         guitar2.play();
         bassGuitar2.play();
     }
-
 }

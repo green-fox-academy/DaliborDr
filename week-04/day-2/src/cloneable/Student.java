@@ -1,9 +1,14 @@
-package greenfoxinheritanceexcersice;
+package cloneable;
 
 
-public class Student extends Person {
+public class Student extends Person implements Cloneable {
     private   String previousOrganization;
     private int skippedDays;
+
+    public Student clone() {
+        return new Student(this.name,this.age,this.gender,this.previousOrganization);
+    }
+
 
     public Student(String name, int age, String gender, String previousOrganization) {
         super(name, age, gender);

@@ -1,7 +1,7 @@
 package zoo;
 
 public abstract class Animal {
-    public String name;
+    private String name;
     protected int age;
 
     public Animal(String name) {

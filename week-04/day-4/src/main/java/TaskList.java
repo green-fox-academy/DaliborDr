@@ -10,4 +10,20 @@ public class TaskList {
         this.tasks = new ArrayList<>();
         this.ioManager = new IOManager("myFile.txt");
     }
+
+    public void addTask(Task task) {
+        tasks.add(task);
+    }
+
+    public void listTasks() {
+        for (Task task : tasks) {
+            System.out.println(task);
+        }
+    }
+
+    private List<String> convertToStringTasks() {
+        List<String> stringTasks = new ArrayList<>();
+        
+
+    }
 }

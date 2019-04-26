@@ -3,7 +3,8 @@ public class Task {
     private boolean completed;
 
 
-    public Task() {
+
+    public void complete() {
         this.completed = true;
     }
 

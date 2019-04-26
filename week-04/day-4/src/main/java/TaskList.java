@@ -10,6 +10,7 @@ public class TaskList {
     public TaskList() {
         this.tasks = new ArrayList<>();
         this.ioManager = new IOManager("myFile.txt");
+        this.readTasks();
     }
 
     public void addTask(Task task) {
@@ -24,6 +25,7 @@ public class TaskList {
     }
 
     public void listTasks() {
+
         for (int i = 1; i <= tasks.size() ; i++) {
             System.out.println(i + " - " + tasks.get(i-1).getName());
 
@@ -54,11 +56,8 @@ public class TaskList {
         return stringTasks;
     }
 
-
-
     public void saveTasks() {
         List<String> stringTasks = this.convertToStringTasks();
         this.ioManager.writeDatas(stringTasks);
     }
-
 }

@@ -21,6 +21,7 @@ public class Main {
 
         if (nextCommand.equals("r")) {
             //this is about to delete a task
+
         }
 
         if (nextCommand.equals("c")) {

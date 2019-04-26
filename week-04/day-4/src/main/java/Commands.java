@@ -26,11 +26,12 @@ public class Commands {
         return new Task(name);
     }
 
-//    public Task removeTask
-//    public Task removeTask() {
-//        System.out.println("Write a name of the task you want to remove");
-//        String name = scanner.nextLine();
-//
-//        return
-//    }
+
+    public void removeTask() {
+        System.out.println("Write a name of the task you want to remove");
+        String nameOfProductToDelete = scanner.nextLine();
+        for ()
+
+
+    }
 }

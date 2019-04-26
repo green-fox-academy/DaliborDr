@@ -1,7 +1,11 @@
 public class Task {
     private String name;
     private boolean completed;
-    
+
+
+    public Task() {
+        this.completed = true;
+    }
 
     public Task(String name) {
         this.name = name;
@@ -14,6 +18,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return this.name;
+        return (completed ? "[x] " : "[ ] ") + this.name;
     }
+
 }

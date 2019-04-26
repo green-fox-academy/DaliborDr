@@ -5,6 +5,7 @@ public class Main {
     TaskList tasks = new TaskList();
     boolean isRunning = true;
 
+
     while (isRunning) {
 
         String nextCommand = cmm.getNextCommand();
@@ -24,6 +25,7 @@ public class Main {
 
         if (nextCommand.equals("c")) {
         //It should make the task completed
+
         }
 
         if (nextCommand.equals("q")) {

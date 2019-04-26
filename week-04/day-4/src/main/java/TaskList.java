@@ -6,6 +6,7 @@ public class TaskList {
     private List<Task> tasks;
     private IOManager ioManager;
 
+
     public TaskList() {
         this.tasks = new ArrayList<>();
         this.ioManager = new IOManager("myFile.txt");
@@ -15,13 +16,24 @@ public class TaskList {
         tasks.add(task);
     }
 
-    public void listTasks() {
+    public void isCompleted() {
         for (Task task : tasks) {
-            int orderedNumOne = 0;
-            orderedNumOne++;
-            Object orderedNum = orderedNumOne;
-            System.out.println(task);
+
         }
+
+    }
+
+    public void listTasks() {
+        for (int i = 1; i <= tasks.size() ; i++) {
+            System.out.println(i + " - " + tasks.get(i-1).getName());
+
+        }
+//        for (Task task : tasks) {
+//            int orderedNumOne = 0;
+//            orderedNumOne++;
+//            Object orderedNum = orderedNumOne;
+//            System.out.println(task);
+//        }
     }
 
     public void readTasks() {

@@ -1,5 +1,3 @@
-import javafx.concurrent.Task;
-
 import java.util.Scanner;
 
 public class Commands {
@@ -20,10 +18,18 @@ public class Commands {
 
     }
 
-    public Task createTAsk() {
+    public Task createTask() {
         System.out.println("Enter the name of the task");
         String name = scanner.nextLine();
 
         return new Task(name);
+    }
+
+//    public Task removeTask
+    public Task removeTask() {
+        System.out.println("Write a name of the task you want to remove");
+        String name = scanner.nextLine();
+
+        return Taskx
     }
 }

@@ -23,4 +23,14 @@ public class IOManager {
         }
         return content;
     }
+
+    public void writeDatas(List<String> datas) {
+        try {
+            Files.write(path,datas);
+        }
+        catch (IOException e) {
+            System.out.println("Something went wrong, your file coundn't be saved");
+        }
+        System.out.println("Your file was succesfully updated");
+    }
 }

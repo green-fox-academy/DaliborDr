@@ -10,9 +10,22 @@ public class Main {
         String nextCommand = cmm.getNextCommand();
 
         if (nextCommand.equals("l")) {
-
-
+        tasks.listTasks();
         }
+
+        if (nextCommand.equals("a")) {
+            Task newTask = cmm.createTask();
+            tasks.addTask(newTask);
+        }
+
+        if (nextCommand.equals("r")) {
+            //this is about to delete a task
+        }
+
+        if (nextCommand.equals("c")) {
+        //It should make the task completed
+        }
+
     }
 
     }

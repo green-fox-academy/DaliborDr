@@ -17,6 +17,9 @@ public class TaskList {
 
     public void listTasks() {
         for (Task task : tasks) {
+            int orderedNumOne = 0;
+            orderedNumOne++;
+            Object orderedNum = orderedNumOne;
             System.out.println(task);
         }
     }

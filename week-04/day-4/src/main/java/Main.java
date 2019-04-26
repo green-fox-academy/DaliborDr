@@ -26,6 +26,11 @@ public class Main {
         //It should make the task completed
         }
 
+        if (nextCommand.equals("q")) {
+            tasks.saveTasks();
+            isRunning = false;
+        }
+
     }
 
     }

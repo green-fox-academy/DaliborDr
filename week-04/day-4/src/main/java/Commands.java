@@ -13,6 +13,7 @@ public class Commands {
         System.out.println("-a   Adds a new task");
         System.out.println("-r   Removes a task");
         System.out.println("-c   Completes a task");
+        System.out.println("-q Quit and save changes");
 
         return scanner.nextLine();
 
@@ -26,10 +27,10 @@ public class Commands {
     }
 
 //    public Task removeTask
-    public Task removeTask() {
-        System.out.println("Write a name of the task you want to remove");
-        String name = scanner.nextLine();
-
-        return Taskx
-    }
+//    public Task removeTask() {
+//        System.out.println("Write a name of the task you want to remove");
+//        String name = scanner.nextLine();
+//
+//        return
+//    }
 }

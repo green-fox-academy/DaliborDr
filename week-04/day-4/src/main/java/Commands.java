@@ -34,4 +34,11 @@ public class Commands {
         return numOfProductToDelete ;
 
     }
+
+    public int completeTask() {
+        System.out.println("Write a number of a task u want to have as a completed.");
+        int numOfTask = scanner.nextInt();
+
+        return numOfTask;
+    }
 }

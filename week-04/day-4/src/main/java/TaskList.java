@@ -24,10 +24,19 @@ public class TaskList {
     public void listTasks() {
 
         for (int i = 1; i <= tasks.size() ; i++) {
-            System.out.println(i + " - " + tasks.get(i-1).getName());
-
+                if (tasks.get(i-1).getStatus()) {
+                    System.out.println(i + " - " + "[x] " + tasks.get(i - 1).getName());
+                } else {
+                    System.out.println(i + " - " + "[ ] " + tasks.get(i - 1).getName());
+                }
         }
     }
+
+    public void changeStatus(int taskNum) {
+        tasks.get(taskNum).complete();
+    }
+
+
 
     public void readTasks() {
         List<String> stringTasks = ioManager.readData();

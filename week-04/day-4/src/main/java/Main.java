@@ -27,6 +27,8 @@ public class Main {
 
         if (nextCommand.equals("c")) {
         //It should make the task completed
+        int numOfTask = cmm.completeTask();
+        tasks.changeStatus(numOfTask - 1);
 
 
         }
@@ -35,8 +37,6 @@ public class Main {
             tasks.saveTasks();
             isRunning = false;
         }
-
     }
-
     }
 }

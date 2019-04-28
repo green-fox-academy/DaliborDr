@@ -1,11 +1,14 @@
 public class Task {
     private String name;
-    private boolean completed;
+    private boolean completed = false;
 
 
+    public boolean getStatus() {
+        return this.completed;
+    }
 
-    public void complete() {
-        this.completed = true;
+    public boolean complete() {
+       return this.completed = true;
     }
 
     public Task(String name) {

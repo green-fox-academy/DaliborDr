@@ -21,11 +21,13 @@ public class Main {
 
         if (nextCommand.equals("r")) {
             //this is about to delete a task
-
+        int numOftask = cmm.removeTask();
+        tasks.removeTasks(numOftask - 1);
         }
 
         if (nextCommand.equals("c")) {
         //It should make the task completed
+
 
         }
 

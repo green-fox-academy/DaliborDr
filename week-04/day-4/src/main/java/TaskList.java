@@ -13,15 +13,12 @@ public class TaskList {
         this.readTasks();
     }
 
-    public void addTask(Task task) {
-        tasks.add(task);
+    public void removeTasks(int taskNumber) {
+        tasks.remove(taskNumber);
     }
 
-    public void isCompleted() {
-        for (Task task : tasks) {
-
-        }
-
+    public void addTask(Task task) {
+        tasks.add(task);
     }
 
     public void listTasks() {
@@ -30,12 +27,6 @@ public class TaskList {
             System.out.println(i + " - " + tasks.get(i-1).getName());
 
         }
-//        for (Task task : tasks) {
-//            int orderedNumOne = 0;
-//            orderedNumOne++;
-//            Object orderedNum = orderedNumOne;
-//            System.out.println(task);
-//        }
     }
 
     public void readTasks() {

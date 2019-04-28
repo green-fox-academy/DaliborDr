@@ -27,11 +27,11 @@ public class Commands {
     }
 
 
-    public void removeTask() {
-        System.out.println("Write a name of the task you want to remove");
-        String nameOfProductToDelete = scanner.nextLine();
-        for ()
+    public int removeTask() {
+        System.out.println("Write a num of the task you want to remove");
+        int numOfProductToDelete = scanner.nextInt();
 
+        return numOfProductToDelete ;
 
     }
 }

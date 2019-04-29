@@ -5,17 +5,30 @@ import java.awt.event.KeyListener;
 
 public class Board extends JComponent implements KeyListener {
 
-    int testBoxX;
-    int testBoxY;
+    private int testBoxX;
+    private int testBoxY;
+    private String goDown;
+    private String goUp;
+    private String goLeft;
+    private String gopRight;
+    private  String fileName;
 
     public Board() {
-        testBoxX = 0;
-        testBoxY = 0;
+//        testBoxX = 0;
+//        testBoxY = 0;
+        goDown = "img/hero-down.png";
+        goUp = "img/hero-up.png";
+        goLeft = "img/hero-left.png";
+        gopRight = "img/hero-right.png";
+        fileName = goDown;
+
 
         // set the size of your draw board
         setPreferredSize(new Dimension(720, 720));
         setVisible(true);
     }
+        private int moveX = 0;
+        private int moveY = 0;
 
     @Override
     public void paint(Graphics graphics) {
@@ -37,7 +50,7 @@ public class Board extends JComponent implements KeyListener {
         wallTile.draw(graphics);
         wallTile1.draw(graphics);
         wallTile2.draw(graphics);
-        Hero hero = new Hero("img/hero-down.png",testBoxX,testBoxY);
+        Hero hero = new Hero(fileName,moveX,moveY);
         hero.draw(graphics);
     }
 
@@ -73,11 +86,33 @@ public class Board extends JComponent implements KeyListener {
     public void keyReleased(KeyEvent e) {
         // When the up or down keys hit, we change the position of our box
         if (e.getKeyCode() == KeyEvent.VK_UP) {
-            testBoxY -= 72;
+            moveY -= 72;
+            fileName = goUp;
+            if (moveY == -72) {
+                moveY += 72;
+            }
         } else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
-            testBoxY += 72;
+            moveY += 72;
+            fileName = goDown;
+            if (moveY == 720) {
+                moveY -= 72;
+            }
         }
-        if ()
+        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+            moveX -= 72;
+            fileName = goLeft;
+            if (moveX == -72) {
+                moveX += 72;
+            }
+
+        } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            moveX += 72;
+            fileName = gopRight;
+            if (moveX == 720) {
+                moveX -= 72;
+            }
+
+        }
         // and redraw to have a new picture with the new coordinates
         repaint();
     }

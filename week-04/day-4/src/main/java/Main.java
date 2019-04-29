@@ -29,8 +29,6 @@ public class Main {
         //It should make the task completed
         int numOfTask = cmm.completeTask();
         tasks.changeStatus(numOfTask - 1);
-
-
         }
 
         if (nextCommand.equals("q")) {

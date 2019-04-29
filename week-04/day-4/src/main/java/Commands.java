@@ -16,7 +16,6 @@ public class Commands {
         System.out.println("-q Quit and save changes");
 
         return scanner.nextLine();
-
     }
 
     public Task createTask() {
@@ -32,7 +31,6 @@ public class Commands {
         int numOfProductToDelete = scanner.nextInt();
 
         return numOfProductToDelete ;
-
     }
 
     public int completeTask() {

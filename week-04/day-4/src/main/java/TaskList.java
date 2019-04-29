@@ -6,7 +6,6 @@ public class TaskList {
     private List<Task> tasks;
     private IOManager ioManager;
 
-
     public TaskList() {
         this.tasks = new ArrayList<>();
         this.ioManager = new IOManager("myFile.txt");
@@ -25,9 +24,9 @@ public class TaskList {
 
         for (int i = 1; i <= tasks.size() ; i++) {
                 if (tasks.get(i-1).getStatus()) {
-                    System.out.println(i + " - " + "[x] " + tasks.get(i - 1).getName());
+                    System.out.println(i + " - " + tasks.get(i - 1).setStatus() + tasks.get(i - 1).getName());
                 } else {
-                    System.out.println(i + " - " + "[ ] " + tasks.get(i - 1).getName());
+                    System.out.println(i + " - " + tasks.get(i - 1).setStatus() + tasks.get(i - 1).getName());
                 }
         }
     }
@@ -36,12 +35,10 @@ public class TaskList {
         tasks.get(taskNum).complete();
     }
 
-
-
     public void readTasks() {
         List<String> stringTasks = ioManager.readData();
         for (String stringTask : stringTasks) {
-            String[] datas = stringTask.split(" ");
+            String[] datas = stringTask.split("  ");
             this.tasks.add(new Task(datas[0]));
         }
 

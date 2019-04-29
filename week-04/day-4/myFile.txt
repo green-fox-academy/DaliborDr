@@ -1,4 +1,4 @@
-sdfsdf
-sdfsdf
-sdfsfd
-test
+[ ] [ ] [ ] walk
+[x] [ ] [ ] go out
+[x] Mafleni f ivfou
+ergeg

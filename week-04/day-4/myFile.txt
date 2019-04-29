@@ -1,4 +1,1 @@
-[ ] [ ] [ ] walk
-[x] [ ] [ ] go out
-[x] Mafleni f ivfou
-ergeg
+[x]   walk

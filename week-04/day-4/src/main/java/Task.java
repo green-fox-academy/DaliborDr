@@ -7,8 +7,7 @@ public class Task {
     public String setStatus() {
         if (completed) {
             return status2;
-        }
-        else {
+        } else {
             return status;
         }
     }

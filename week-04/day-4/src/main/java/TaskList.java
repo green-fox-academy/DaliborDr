@@ -22,12 +22,12 @@ public class TaskList {
 
     public void listTasks() {
 
-        for (int i = 1; i <= tasks.size() ; i++) {
-                if (tasks.get(i-1).getStatus()) {
-                    System.out.println(i + " - " + tasks.get(i - 1).setStatus() + tasks.get(i - 1).getName());
-                } else {
-                    System.out.println(i + " - " + tasks.get(i - 1).setStatus() + tasks.get(i - 1).getName());
-                }
+        for (int i = 1; i <= tasks.size(); i++) {
+            if (tasks.get(i - 1).getStatus()) {
+                System.out.println(i + " - " + tasks.get(i - 1).setStatus() + tasks.get(i - 1).getName());
+            } else {
+                System.out.println(i + " - " + tasks.get(i - 1).setStatus() + tasks.get(i - 1).getName());
+            }
         }
     }
 
@@ -39,16 +39,21 @@ public class TaskList {
         List<String> stringTasks = ioManager.readData();
         for (String stringTask : stringTasks) {
             String[] datas = stringTask.split("  ");
-            this.tasks.add(new Task(datas[0]));
+            boolean taskIsDone = datas[0].equals("[x]") ? true : false;
+            Task task = new Task(datas[1]);
+            if (taskIsDone) {
+                task.complete();
+            }
+            this.tasks.add(task);
         }
-
     }
 
     private List<String> convertToStringTasks() {
         List<String> stringTasks = new ArrayList<>();
         for (Task task : tasks) {
-            stringTasks.add(task.getName());
-
+            String taskStatus = task.setStatus();
+            String taskName = task.getName();
+            stringTasks.add(taskStatus + "  " + taskName);
         }
         return stringTasks;
     }

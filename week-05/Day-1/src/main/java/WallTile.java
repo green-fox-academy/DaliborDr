@@ -3,8 +3,8 @@ public class WallTile extends Tile {
         return reachable;
     }
 
-    public void setReachable(boolean reachable) {
-        this.reachable = reachable;
+    public boolean isReachable(boolean reachable) {
+        return reachable;
     }
 
     private boolean reachable = false;

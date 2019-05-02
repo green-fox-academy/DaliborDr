@@ -7,6 +7,15 @@ import java.io.IOException;
 public class PositionedImage {
 
     BufferedImage image;
+
+    public void setPosX(int posX) {
+        this.posX = posX;
+    }
+
+    public void setPosY(int posY) {
+        this.posY = posY;
+    }
+
     int posX, posY;
 
     public PositionedImage(String filename, int posX, int posY) {

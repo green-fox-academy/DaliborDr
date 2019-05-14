@@ -4,13 +4,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class Board extends JComponent implements KeyListener {
-    private int moveX = 0;
-    private int moveY = 0;
-    private String goDown;
-    private String goUp;
-    private String goLeft;
-    private String gopRight;
-    private String fileName;
+    Hero hero;
+
     public int[][] wallMatrix = {
             {0, 0, 0, 1, 0, 1, 0, 0, 0, 1},
             {0, 1, 0, 1, 0, 1, 0, 1, 0, 1},
@@ -25,28 +20,16 @@ public class Board extends JComponent implements KeyListener {
     };
 
 
-    public Board() {
 
-        goDown = "img/hero-down.png";
-        goUp = "img/hero-up.png";
-        goLeft = "img/hero-left.png";
-        gopRight = "img/hero-right.png";
-        fileName = goDown;
+    public Board() {
         // set the size of your draw board
         setPreferredSize(new Dimension(720, 720));
         setVisible(true);
+        this.hero = new Hero("img/hero-down.png",0,0);
+
     }
 
-    public int getWallX() {
-        int posX;
-        for (int i = 0; i < 10; i++) {
-            if (wallMatrix[0][i] == 1) {
-                posX = i * 72;
 
-                return posX;
-            }
-        }return 0;
-    }
 
 
 
@@ -74,7 +57,7 @@ public class Board extends JComponent implements KeyListener {
                 }
             }
         }
-        Hero hero = new Hero(fileName, moveX, moveY);
+//        Hero hero = new Hero(fileName, moveX, moveY);
         hero.draw(graphics);
         Skeleton zombie = new Skeleton("img/skeleton.png", 72,144);
         zombie.draw(graphics);
@@ -113,33 +96,14 @@ public class Board extends JComponent implements KeyListener {
     public void keyReleased(KeyEvent e) {
         // When the up or down keys hit, we change the position of our box
         if (e.getKeyCode() == KeyEvent.VK_UP) {
-            moveY -= 72;
-            fileName = goUp;
-            if (moveY == -72) {
-                moveY += 72;
-            }
-
+            hero.moveUp();
         } else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
-            moveY += 72;
-            fileName = goDown;
-            if (moveY == 720) {
-                moveY -= 72;
-            }
+            hero.moveDown();
         }
         if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            moveX -= 72;
-            fileName = goLeft;
-            if (moveX == -72 || moveX == getWallX()) {
-                moveX += 72;
-            }
-
-
+            hero.moveLeft();
         } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            moveX += 72;
-            fileName = gopRight;
-            if (moveX == 720) {
-                moveX -= 72;
-            }
+            hero.moveRight();
         }
         // and redraw to have a new picture with the new coordinates
         repaint();

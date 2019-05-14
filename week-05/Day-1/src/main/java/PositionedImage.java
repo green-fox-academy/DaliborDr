@@ -8,6 +8,14 @@ public class PositionedImage {
 
     BufferedImage image;
 
+    public int getPosX() {
+        return posX;
+    }
+
+    public int getPosY() {
+        return posY;
+    }
+
     public void setPosX(int posX) {
         this.posX = posX;
     }
@@ -17,10 +25,12 @@ public class PositionedImage {
     }
 
     int posX, posY;
+    String filename;
 
     public PositionedImage(String filename, int posX, int posY) {
         this.posX = posX;
         this.posY = posY;
+        this.filename = filename;
         try {
             image = ImageIO.read(new File(filename));
         } catch (IOException e) {

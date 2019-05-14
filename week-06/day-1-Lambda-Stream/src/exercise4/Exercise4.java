@@ -20,6 +20,7 @@ public class Exercise4 {
                 .filter(number -> !(number%2 ==0))
                 .mapToInt(number -> number)
                 .average();
+        //we can also aply the method .getDouble at the og the code and then its not nessesary to use OptionalDouble, just Double
         System.out.println(result);
 
     }

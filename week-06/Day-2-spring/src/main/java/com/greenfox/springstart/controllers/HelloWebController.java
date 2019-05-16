@@ -27,8 +27,6 @@ public class HelloWebController {
         model.addAttribute("hello",hello.getRandomString());
         model.addAttribute("style",style());
 
-
-
         return "greeting";
     }
 

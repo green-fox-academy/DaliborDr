@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My WebShop</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+<button onclick="window.location.href = 'http://localhost:8080/web/only-available';">ONLY AVAILABLE</button>
+<button onclick="window.location.href = 'http://localhost:8080/web/cheapest-first';">CHEAPEST FIRST</button>
+<button onclick="window.location.href = 'http://localhost:8080/web/contains-nike';">CONTAINS NIKE</button>
+<button onclick="window.location.href = 'http://localhost:8080/web/average-stock';">AVERAGE STOCK</button>
+<button onclick="window.location.href = 'http://localhost:8080/web/most-expensive';">MOST EXPENSIVE AVAILABLE</button>
+<p th:text="'Average stock:' + ${myItems}"></p>
+
+</body>
+</html>

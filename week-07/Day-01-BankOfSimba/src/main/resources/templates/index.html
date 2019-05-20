@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Acc</title>
+</head>
+<body>
+<table>
+    <thead>
+    <th>Name</th>
+    <th>Balance</th>
+    <th>AnimalType</th>
+    </thead>
+    <tbody>
+    <tr th:object="${Simba}">
+        <td th:text="*{name}"></td>
+        <td th:text="|*{#numbers.formatDecimal(balance,3,'COMMA',2,'POINT')}${currency}|"></td>
+        <td th:text="*{animalType}"></td>
+    </tr>
+    </tbody>
+</table>
+<p th:text="${string}"></p>
+<p th:utext="${string}"></p>
+</body>
+</html>

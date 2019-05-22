@@ -30,12 +30,12 @@ public class CollorController {
     }
 
     @RequestMapping("/useful/email")
-    public String emailValidator (Model model, @RequestParam String email) {
+    public String emailValidator(Model model, @RequestParam String email) {
         if (utilityService.validateEmail(email)) {
-            model.addAttribute("valid",email + "is a valid email address");
-            model.addAttribute("color","green");
+            model.addAttribute("valid", email + "is a valid email address");
+            model.addAttribute("color", "green");
         } else {
-            model.addAttribute("valid",email + "is not a valid email address");
+            model.addAttribute("valid", email + "is not a valid email address");
             model.addAttribute("color", "red");
         }
         return "Index";
@@ -43,9 +43,10 @@ public class CollorController {
 
     @RequestMapping("/useful/encoder")
     public String caesar(Model model, @RequestParam String text, @RequestParam int number) {
-        model.addAttribute("encode",utilityService.caesar(text,number));
+        model.addAttribute("encode", utilityService.caesar(text, number));
         return "Index";
     }
+
     @RequestMapping("/useful/decoder")
     public String caesarDecode(Model model, @RequestParam String text, @RequestParam int number) {
         model.addAttribute("decode", utilityService.caesar(text, -number));

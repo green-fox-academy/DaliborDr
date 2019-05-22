@@ -33,6 +33,5 @@ public class DependenciesApplication implements CommandLineRunner {
         printer.log("hello");
         color1.printColor();
         color2.printColor();
-
     }
 }

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>GreenFox</title>
+</head>
+<body>
+<a href="/gfa">Home</a>
+<a href="/gfa/list">Student List</a>
+<a href="/gfa/add">Add Student</a>
+<ul>
+    <li th:each="student : ${list}" th:text="${student}"></li>
+</ul>
+
+
+
+</body>
+</html>

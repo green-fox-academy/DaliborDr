@@ -20,12 +20,21 @@ public class StudentService {
         return names;
     }
 
-    public List<String> addStudent(String name) {
-        names.add(name);
-        return names;
-    }
-
     public void save(String student) {
         names.add(student);
     }
+
+    public int countStudents() {
+        return names.size();
+    }
+
+    public String isPresent(String name) {
+        if (names.contains(name)) {
+            return "Is present";
+        } else {
+            return "Is not present";
+        }
+    }
+
+
 }

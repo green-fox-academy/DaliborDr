@@ -8,9 +8,13 @@
 <a href="/gfa">Home</a>
 <a href="/gfa/list">Student List</a>
 <a href="/gfa/add">Add Student</a>
+<a href="/gfa/check">Check presence</a>
 <ul>
     <li th:each="student : ${list}" th:text="${student}"></li>
 </ul>
+
+<p th:text="${numOfStudents}"></p>
+
 
 
 

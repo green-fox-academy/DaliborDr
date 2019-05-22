@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Colors</title>
+</head>
+<body th:style="'background-color:' + ${randomColor}">
+<a href="http://localhost:8080/useful">Home</a>
+<a href="http://localhost:8080/useful/colored">Colored</a>
+<a href="http://localhost:8080/useful/email?email=dalibordrozda@seznam.cz">Check Email</a>
+<a href="http://localhost:8080/useful/encoder?text=super&number=1">Encoder</a>
+<a href="http://localhost:8080/useful/decoder?text=tvqfs&number=1">Decoder</a>
+<p th:style="'color:' + ${color}" th:text="${valid}"></p>
+<p th:text="${encode}"></p>
+<p th:text="${decode}"></p>
+
+
+</body>
+</html>

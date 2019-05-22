@@ -30,7 +30,9 @@ public class DependenciesApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        printer.log("hello\n" + "SOME SPRING INFO");
+        printer.log("hello");
+        color1.printColor();
+        color2.printColor();
 
     }
 }

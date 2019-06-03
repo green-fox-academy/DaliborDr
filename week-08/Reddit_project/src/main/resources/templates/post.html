@@ -7,6 +7,15 @@
 <body>
 <a href="/newPost">Submit new post</a>
 <h1>Trending posts</h1>
+<ul th:each="post : ${showAll}">
+    <li>
+        <span th:text="${post.getEvaluation()}"></span>
+        <a th:href="@{'/increment/' + ${post.getId()}}">+</a>
+        <a th:href="@{'/decrement/' + ${post.getId()}}">-</a>
+        <a th:href="@{'http://' + ${post.getUrl()}}" th:text="${post.getTitle()}"></a>
+
+    </li>
+</ul>
 
 </body>
 </html>

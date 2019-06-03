@@ -18,8 +18,7 @@ public class Post {
 
     }
 
-    public Post(int evaluation, String title, String url) {
-        this.evaluation = evaluation;
+    public Post(String title, String url) {
         this.title = title;
         this.url = url;
     }
@@ -54,5 +53,13 @@ public class Post {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public void increment() {
+        this.evaluation++;
+    }
+
+    public void decrement() {
+        this.evaluation--;
     }
 }

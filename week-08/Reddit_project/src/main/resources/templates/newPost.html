@@ -5,8 +5,13 @@
     <title>Post Main</title>
 </head>
 <body>
-<a href="/newPost">Submit new post</a>
-<h1>Trending posts</h1>
+<h1>Add new Post</h1>
+<form action="/newPost" method="post">
+    Title : <input type="text" name="title">
+    URL : <input type="text" name="url">
+    <input type="submit" value="submit">
+
+</form>
 
 </body>
 </html>

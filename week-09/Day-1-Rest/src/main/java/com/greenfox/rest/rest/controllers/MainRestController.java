@@ -2,10 +2,7 @@ package com.greenfox.rest.rest.controllers;
 
 import com.greenfox.rest.rest.models.*;
 import com.greenfox.rest.rest.models.Error;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class MainRestController {
@@ -41,6 +38,9 @@ public class MainRestController {
             throw new ResourceNotFoundException();
         }
     }
+
+    @PostMapping("/dountil/{action}")
+    public Object doUntil(@PathVariable String action)
 
 
 
